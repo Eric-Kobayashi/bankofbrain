@@ -1,0 +1,74 @@
+{
+  "pixel_classifier_type": "OpenCVPixelClassifier",
+  "metadata": {
+    "inputPadding": 0,
+    "inputResolution": {
+      "pixelWidth": {
+        "value": 0.2528,
+        "unit": "µm"
+      },
+      "pixelHeight": {
+        "value": 0.2528,
+        "unit": "µm"
+      },
+      "zSpacing": {
+        "value": 1.0,
+        "unit": "z-slice"
+      },
+      "timeUnit": "SECONDS",
+      "timepoints": []
+    },
+    "inputWidth": 512,
+    "inputHeight": 512,
+    "inputNumChannels": 3,
+    "outputType": "CLASSIFICATION",
+    "outputChannels": [],
+    "classificationLabels": {
+      "1": {
+        "name": "Necrosis",
+        "colorRGB": -13487566
+      }
+    }
+  },
+  "op": {
+    "type": "data.op.channels",
+    "colorTransforms": [
+      {
+        "stains": {
+          "name": "H-DAB trial",
+          "stain1": {
+            "r": 0.6512273184223307,
+            "g": 0.701244778301158,
+            "b": 0.29010125929719804,
+            "name": "Hematoxylin",
+            "isResidual": false
+          },
+          "stain2": {
+            "r": 0.26896382970043914,
+            "g": 0.56792361936747,
+            "b": 0.7778953791336122,
+            "name": "DAB",
+            "isResidual": false
+          },
+          "stain3": {
+            "r": 0.6332714570151143,
+            "g": -0.7128092746800375,
+            "b": 0.30144684383830084,
+            "name": "Residual",
+            "isResidual": true
+          },
+          "maxRed": 255.0,
+          "maxGreen": 255.0,
+          "maxBlue": 255.0
+        },
+        "stainNumber": 2
+      }
+    ],
+    "op": {
+      "type": "op.constant",
+      "thresholds": [
+        0.15
+      ]
+    }
+  }
+}

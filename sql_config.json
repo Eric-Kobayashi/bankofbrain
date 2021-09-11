@@ -1,0 +1,4 @@
+{
+  "SQL_connect": "dbname='tauopathy' user='tau' host='localhost' password='chemistry'",
+  "table_name": "kaalund"
+}
