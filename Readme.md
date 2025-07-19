@@ -107,3 +107,5 @@ Generate a table counting the tau positive and negative cells for all subregions
 
 #### `generate_all_ribbon_distance`
 Generate a table of all cells located at the cortical ribbon for the slide with their distance to the white/grey matter boundary measured. Useful for analysing the cortical layer distribution of tau pathology.
+
+
